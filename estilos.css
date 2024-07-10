@@ -1,0 +1,99 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente de texto a Arial, con una fuente alternativa sans-serif */
+    margin: 20px; /* Agrega un margen de 20 píxeles alrededor del contenido de la página */
+}
+
+/* Estilo para el formulario */
+form {
+    margin-bottom: 20px; /* Agrega un margen de 20 píxeles debajo del formulario */
+}
+
+/* Estilo para las etiquetas dentro del formulario */
+label {
+    display: block; /* Asegura que cada etiqueta se muestre en una línea nueva */
+    margin-top: 10px; /* Agrega un margen superior de 10 píxeles */
+}
+
+/* Estilo para los campos de entrada en el formulario */
+input {
+    margin-top: 5px; /* Agrega un margen superior de 5 píxeles */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10 píxeles */
+}
+
+/* Estilo para los botones en el formulario */
+button {
+    margin-top: 10px; /* Agrega un margen superior de 10 píxeles */
+}
+
+/* Estilo para la sección de resultados */
+#result {
+    margin-top: 20px; /* Agrega un margen superior de 20 píxeles */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente a 1.2 veces el tamaño de la fuente base */
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+/* Estilo para el texto en la esquina inferior izquierda del pie de página */
+.texto-inferior-izquierda {
+    position: fixed; /* Fija el texto en la posición especificada, incluso al hacer scroll */
+    bottom: 10px; /* Posiciona el texto a 10 píxeles desde el borde inferior */
+    left: 10px; /* Posiciona el texto a 10 píxeles desde el borde izquierdo */
+    font-size: 1em; /* Tamaño de fuente de 1 vez el tamaño de la fuente base */
+    color: gray; /* Color del texto gris */
+}
+
+/* Estilo para el contenedor de los campos de parciales */
+.parciales-container {
+    display: flex; /* Usa flexbox para el diseño de los campos de parciales */
+    flex-wrap: wrap; /* Permite que los campos se envuelvan a la siguiente fila cuando no hay espacio suficiente */
+    gap: 10px; /* Establece un espacio de 10 píxeles entre cada campo */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20 píxeles */
+}
+
+/* Estilo para cada par de etiqueta y campo de parcial */
+.parcial-item {
+    flex: 0 0 calc(33.33% - 10px); /* Establece el ancho del campo para que haya 3 campos por fila, ajustando por el espacio del gap */
+    display: flex; /* Usa flexbox para alinear la etiqueta y el campo */
+    flex-direction: column; /* Alinea la etiqueta y el campo en una columna vertical */
+    gap: 5px; /* Establece un espacio de 5 píxeles entre la etiqueta y el campo */
+}
+
+/* Estilo opcional para mejorar la apariencia de los campos de entrada dentro de cada parcial */
+.parcial-item input {
+    padding: 8px; /* Agrega un relleno de 8 píxeles dentro del campo de entrada */
+    border: 1px solid #ccc; /* Agrega un borde gris claro alrededor del campo */
+    border-radius: 4px; /* Redondea las esquinas del campo de entrada */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total del campo */
+}
+
+/* Estilo para el botón de calcular promedio */
+#submitBtn {
+    margin: 20px auto 0 auto; /* Centra el botón horizontalmente con un margen superior de 20 píxeles */
+    display: block; /* Asegura que el botón se muestre como un bloque */
+}
+
+/* Estilo para el banner que contiene el título */
+.banner {
+    background-color: black; /* Establece el color de fondo a negro */
+    padding: 20px; /* Agrega un espacio interno de 20 píxeles */
+    overflow: hidden; /* Asegura que el contenido en movimiento no se desborde fuera del banner */
+    position: relative; /* Establece una posición relativa para el banner, necesaria para la animación */
+}
+
+/* Estilo para el título dentro del banner */
+.banner h1 {
+    color: red; /* Establece el color del texto a rojo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-size: 3em; /* Establece el tamaño de la fuente a 2 veces el tamaño de la fuente base */
+    animation: scroll-text 6s linear infinite; /* Aplica la animación de desplazamiento del texto hacia la derecha */
+}
+
+/* Definición de la animación de desplazamiento del texto */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(-100%); /* Comienza el texto fuera de vista a la derecha */
+    }
+    100% {
+        transform: translateX(100%); /* Mueve el texto fuera de vista a la izquierda */
+    }
+}
